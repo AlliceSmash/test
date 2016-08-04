@@ -3,8 +3,7 @@
   <Role name="Web_App">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
-      <Setting name="Azure.ConnectionString" value="%CONNECTION_STRING%"/>
+      <Setting name="Azure.ConnectionString" value="%CONNECTION_STRING%" />
     </ConfigurationSettings>
     <Certificates>
     </Certificates>
@@ -12,7 +11,6 @@
   <Role name="useless_worker">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>
