@@ -3,7 +3,7 @@
   <Role name="Web_App">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Azure.ConnectionString" value="<%= ENV['AZURE.CONNECTION_STRING'] %>" />
+      <Setting name="Azure.ConnectionString" value="<%= ENV['AZURE.CONNECTIONSTRING'] %>" />
     </ConfigurationSettings>
     <Certificates>
       <Certificate name="appveyer2azure" thumbprint="<%= ENV['CERT_THUMBPRINT%>" thumbprintAlgorithm="sha1" />
