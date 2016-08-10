@@ -3,10 +3,10 @@
   <Role name="Web_App">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Azure.ConnectionString" value="<%= ENV['AZURE.CONNECTIONSTRING'] %>" />
+      <Setting name="Azure.ConnectionString" value="<%= ENV['CONNECTIONSTRING'] %>" />
     </ConfigurationSettings>
     <Certificates>
-      <Certificate name="appveyer2azure" thumbprint="<%= ENV['CERT_THUMBPRINT%>" thumbprintAlgorithm="sha1" />
+      <Certificate name="appveyer2azure" thumbprint="<%= ENV['CERT_THUMBPRINT %>" thumbprintAlgorithm="sha1" />
     </Certificates>
   </Role>
   <Role name="useless_worker">

@@ -1,0 +1,21 @@
+version: 1.0.{build}
+environment:
+  user_conf:
+    secure: 78CDR4JjoGv3EUYGvnLbpJShe8uQAWjUbX9KSHkoTZg=
+  cert_thumbprint:
+    secure: qTFb7G5b1nWMESliWglUbUt2S/RKrRAEKhh0GdUAUYCzl2R6WyVqmkMcGla6i2HK
+  connection_string:
+    secure: BjRVTg+BW6lHIrVbXDtc+/u10mhJ5k50lBGQVBk4ShUjnv0SEPUNEK3o5+BkMxiHl4fP6JP3zK8GloFY42V7DKbH4nCOHLOP2Wq80KrXcnP+LTN2a6sFDc+Q4/NWW94LGjDdZAWSeCy/ss+Xj8u17QumS9EdWh7ZpPqLnARL0EQrPTFKGC0dS+XOEl66/02yHHkahncruPUoc4CPIYZfcw==
+install:
+- cmd: >-
+    nuget install secure-file -ExcludeVersion
+
+    secure-file\tools\secure-file -decrypt Web_App\user.config.enc -secret %user_conf%
+before_build:
+- ps: nuget restore
+build:
+  publish_azure: true
+  verbosity: minimal
+deploy:
+- provider: Environment
+  name: azure test
