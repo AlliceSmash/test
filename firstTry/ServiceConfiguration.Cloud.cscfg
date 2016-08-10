@@ -6,7 +6,7 @@
       <Setting name="Azure.ConnectionString" value="%CONNECTION_STRING%" />
     </ConfigurationSettings>
     <Certificates>
-      <Certificate name="appveyer2azure" thumbprint="%CERT_THUMBPRINT%" thumbprintAlgorithm="sha1" />
+      <Certificate name="appveyer2azure" thumbprint="8A554685F403FD4EF0CAAF2B6A581A37AC1638AE" thumbprintAlgorithm="sha1" />
     </Certificates>
   </Role>
   <Role name="useless_worker">
